@@ -2,9 +2,9 @@ package org.classapp.backend.data.model;
 
 public class Role {
 
-	private Integer id = null;
-	private String name = "";
-	private String description = "";
+	private Integer id;
+	private String name;
+	private String description;
 	/**
 	 * @param id
 	 * @param name
