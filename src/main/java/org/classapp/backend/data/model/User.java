@@ -1,8 +1,19 @@
 package org.classapp.backend.data.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name = "USERS")
 public class User {
-	
-	int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Long id;
 	String username;
 	String password;
 	String email;
@@ -11,22 +22,22 @@ public class User {
 	public User(){}
 
 
-	public User(int id, String username, String password, String email) {
+	public User(Long id, String username, String password, String email) {
 		super();
-		this.id = id;
+		this.id =  id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
 	}
 
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(Long id2) {
+		id = id2;
 	}
 
 

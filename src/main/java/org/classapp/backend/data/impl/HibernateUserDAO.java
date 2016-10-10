@@ -3,10 +3,10 @@ package org.classapp.backend.data.impl;
 import java.util.List;
 
 import org.classapp.backend.data.dao.UserDAO;
+import org.classapp.backend.data.HibernateSession;
 import org.classapp.backend.data.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.sistema.test.Test.HibernateSession;
 
 public class HibernateUserDAO implements UserDAO {
 	
@@ -38,19 +38,17 @@ public class HibernateUserDAO implements UserDAO {
 	 * 
 	 * @param new customer
 	 */
-	public void insert(User customer) {
+	public void insert(User user) {
 		SessionFactory sessionFactory = HibernateSession.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		Long id = (Long) session.save(customer);
-		customer.setId(id);
+		Long id =  (Long) session.save(user);
+		user.setId(id);
 		session.getTransaction().commit();
 		session.close();
 	}
-
 	/*
 	 * updates customer
-	 * 
 	 * @param customer to update
 	 */
 	public void update(User customer) {
