@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.classapp.backend.data.model">
+
+	<class name="Avatar" table="AVATARS">
+		<id name="id" type="int" column="ID">
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		<property name="image" column="IMAGE" />
+		<one-to-one name="user" constrained="true" />
+	</class>
+
+</hibernate-mapping>
+

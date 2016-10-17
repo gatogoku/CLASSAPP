@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.classapp.backend.data.model">
+
+	<class name="User" table="USERS">
+		<id name="id" type="int" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="username" column="USERNAME" />
+		<property name="password" column="PASSWORD" />
+		<property name="email" column="EMAIL" />
+
+		
+		
+		
+<one-to-one name="avatar" cascade="persist,delete" />
+</class>
+
+</hibernate-mapping>

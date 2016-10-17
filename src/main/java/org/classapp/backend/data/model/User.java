@@ -8,15 +8,24 @@ import javax.persistence.Table;
 
 
 
-@Entity
-@Table(name = "USERS")
+
 public class User {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 	String username;
 	String password;
 	String email;
+	Avatar avatar;
+	public Avatar getAvatar() {
+		return avatar;
+	}
+
+
+	public void setAvatar(Avatar avatar) {
+		this.avatar = avatar;
+	}
+
+
+	
 	
 	
 	public User(){}
@@ -69,6 +78,9 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
+	
 	
 	
 
