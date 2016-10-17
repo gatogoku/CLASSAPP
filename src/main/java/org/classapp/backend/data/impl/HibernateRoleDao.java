@@ -32,7 +32,7 @@ public class HibernateRoleDao implements roleDao {
 		SessionFactory sessionFactory = HibernateSession.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		Integer id = (Integer) session.save(role);
+		Long id = (Long) session.save(role);
 		role.setId(id);
 		session.getTransaction().commit();
 		session.close();
@@ -59,5 +59,7 @@ public class HibernateRoleDao implements roleDao {
 		session.close();
 		
 	}
+
+
 
 }
