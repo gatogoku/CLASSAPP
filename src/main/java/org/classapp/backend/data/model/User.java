@@ -34,6 +34,7 @@ public class User {
 	
 	public User(String name){
 		
+
 	}
 
 
@@ -43,6 +44,10 @@ public class User {
 		this.username = username;
 		this.password = password;
 		this.email = email;
+
+
+		
+		
 
 	}
 
