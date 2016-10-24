@@ -29,12 +29,12 @@ public class User {
 	
 	
 	public User(){}
-<<<<<<< HEAD
+
 	
 	
 	public User(String name){
 		
-=======
+	}
 
 
 	public User(Long id, String username, String password, String email) {
@@ -43,7 +43,7 @@ public class User {
 		this.username = username;
 		this.password = password;
 		this.email = email;
->>>>>>> refs/remotes/origin/BRANCH_ADRIAN
+
 	}
 
 
