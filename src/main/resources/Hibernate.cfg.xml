@@ -26,8 +26,14 @@
 
 		<!-- Here comes the mapping definition - saved in resources dir with this 
 			hibernate config -->
+<<<<<<< HEAD
 		<mapping resource="Class.hbm.xml" />
 
+=======
+		
+		<mapping resource = "Avatar.hbm.xml"/>
+		<mapping resource = "User.hbm.xml"/>
+>>>>>>> 0332c462d01bca0937878bf785f8ce7aa65ecbb9
 	</session-factory>
 
 </hibernate-configuration>
