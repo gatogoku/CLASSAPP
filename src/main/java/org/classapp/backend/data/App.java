@@ -25,9 +25,9 @@ public class App
     	User user3 = new User(null,"hey","xxyxxy","hey@gmail.com");
     	
    
-    	//user1.setAvatar(new Avatar("imagen1","1.jpg"));
+    	user1.setAvatar(new Avatar("imagen1","1.jpg"));
     	
-    	//user2.setAvatar(new Avatar("imagen2","2.jpg"));
+    	user2.setAvatar(new Avatar("imagen2","2.jpg"));
     	
     	
     	

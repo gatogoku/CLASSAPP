@@ -14,6 +14,8 @@ public class User {
 	String username;
 	String password;
 	String email;
+	
+
 	Avatar avatar;
 	public Avatar getAvatar() {
 		return avatar;
@@ -23,7 +25,6 @@ public class User {
 	public void setAvatar(Avatar avatar) {
 		this.avatar = avatar;
 	}
-
 
 	
 	
