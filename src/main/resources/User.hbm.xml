@@ -12,7 +12,12 @@
 <property name="username" column="username"></property>
 <property name="password" column="password"></property>
 <property name="email" column="email"></property>
+<one-to-one name="avatar" cascade="all-delete-orphan" />
 
+<set name="roles" table="user_role" lazy="false" cascade="all-delete-orphan">
+<key column="iduser"></key>
+<many-to-many column="idrole" class="Role"></many-to-many>
+</set>
 
 </class>
 

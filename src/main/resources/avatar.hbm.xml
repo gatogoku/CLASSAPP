@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Mapping configuration details between Customer class and customer table -->
+<hibernate-mapping package="org.classapp.backend.data.model">
+
+	<class name="Avatar" table="AVATAR">
+		<id name="id" column="ID">
+			<generator class="identity" />
+			<param name="property">avatar</param>
+		</id>
+	
+		<property name="description" column="DESCRIPTION" />
+			<property name="image" column="IMAGE" />
+	</class>
+
+</hibernate-mapping>
