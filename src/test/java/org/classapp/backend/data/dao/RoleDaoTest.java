@@ -6,7 +6,7 @@ import org.classapp.backend.data.model.Role;
 import junit.framework.TestCase;
 
 public class RoleDaoTest extends TestCase {
-	private roleDao roleDAO;
+	private RoleDao roleDAO;
 	
 	
 	protected void setUp() throws Exception {

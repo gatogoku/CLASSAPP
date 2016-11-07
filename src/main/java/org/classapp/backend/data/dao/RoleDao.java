@@ -6,7 +6,7 @@ import org.classapp.backend.data.model.Role;
 
 
 
-public interface roleDao {
+public interface RoleDao {
 
 	public Role selectById(Long id);
 	public List<Role> selectAll();

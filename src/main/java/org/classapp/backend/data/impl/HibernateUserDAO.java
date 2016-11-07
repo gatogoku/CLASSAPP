@@ -12,7 +12,5 @@ public class HibernateUserDAO extends GenericDAOHibernate<User> implements UserD
 	
 	
 	
-	
-	
 
 }
