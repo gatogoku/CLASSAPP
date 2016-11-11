@@ -4,6 +4,6 @@ import java.util.List;
 
 import org.classapp.backend.data.model.Role;
 
-public interface roleDao extends GenericDAO<Role> {
+public interface RoleDAO extends GenericDAO<Role> {
 
 }
