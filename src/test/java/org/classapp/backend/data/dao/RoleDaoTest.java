@@ -5,8 +5,9 @@ import org.classapp.backend.data.model.Role;
 
 import junit.framework.TestCase;
 
-public class RoleDaoTest extends TestCase {
+public class RoleDaoTest extends TestCase  {
 	private roleDao roleDAO;
+	
 	
 	
 	protected void setUp() throws Exception {
@@ -19,16 +20,17 @@ public class RoleDaoTest extends TestCase {
 	public final void testSelectById() {
 		Role insertRole = new Role(null,"Admin","Administrator role");
 		roleDAO.insert(insertRole);
-		Role role = roleDAO.selectById(insertRole.getId());
+		Role role = roleDAO.selectById(insertRole.getId(), null);
+		
 		assertEquals("Select by Id should exist",role.getId(), insertRole.getId());
 	}
 
 	public final void testSelectAll() {
-		int totalElements = roleDAO.selectAll().size();
+		int totalElements = roleDAO.selectAll(null).size();
 		
 		Role insertRole = new Role(null,"Admin","Administrator role");
 		roleDAO.insert(insertRole);
-		int totalElementsAfterInsert = roleDAO.selectAll().size();
+		int totalElementsAfterInsert = roleDAO.selectAll(null).size();
 		
 		assertEquals("Select All returns all elements",totalElements + 1, totalElementsAfterInsert);
 	}
@@ -46,9 +48,9 @@ String updatedName = "Admin changed";
 		
 
 		insertRole.setName(updatedName);
-		roleDAO.Update(insertRole);
+		roleDAO.update(insertRole);
 	
-		Role updatedRole = roleDAO.selectById(insertRole.getId());
+		Role updatedRole = roleDAO.selectById(insertRole.getId(), null);
 		
 		assertEquals("Role name was changed", updatedName, updatedRole.getName());
 	}
@@ -58,8 +60,8 @@ String updatedName = "Admin changed";
 		roleDAO.insert(insertRole);
 		
 		
-		roleDAO.Delete(insertRole);
-		Role role = roleDAO.selectById(insertRole.getId());
+		roleDAO.delete(insertRole);
+		Role role = roleDAO.selectById(insertRole.getId(), null);
 		assertNull("Select by Id with a deleted record id shoud be null",role);
 	}
 
