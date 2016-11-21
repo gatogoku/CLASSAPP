@@ -8,8 +8,8 @@
 <class name="User" table="User">
 <id name="id" column="iduser">
 
-<generator class="foreign"><param name="property">country</param>
-</generator>
+<generator class="native"></generator>
+
 </id>
 <property name="username" column="username"></property>
 <property name="password" column="password"></property>
@@ -17,7 +17,7 @@
 
 
 
-<one-to-one name="Avatar" constrained="true" />
+<one-to-one name="Avatar" cascade="persist,delete" />
 
 <set name="roles" table="user_role" lazy="false" cascade="all-delete-orphan">
 <key column="iduser"></key>

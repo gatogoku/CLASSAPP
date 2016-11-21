@@ -8,13 +8,15 @@
 
 	<class name="Avatar" table="AVATAR">
 		<id name="id" column="ID">
-			<generator class="identity" />
+			<generator class="foreign">
+				<param name="property">country</param>
+			</generator>
 			
 		</id>
 	
 		<property name="description" column="DESCRIPTION" />
 			<property name="image" column="IMAGE" />
-			<one-to-one name="User" cascade="persist,delete" />
+	<one-to-one name="User" constrained="true" />
 			
 	</class>
 
