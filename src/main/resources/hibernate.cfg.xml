@@ -30,7 +30,8 @@
 		
 	<mapping resource = "avatar.hbm.xml"/>
 		<mapping resource = "User.hbm.xml"/>
-
+<mapping resource="ChatGroup.hbm.xml" />
+		<mapping resource="Message.hbm.xml" />
 		<mapping resource="Role.hbm.xml" />
 
 
