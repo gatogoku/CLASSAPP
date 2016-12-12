@@ -5,19 +5,28 @@
 
 <hibernate-mapping package="org.classapp.backend.data.model">
 
-<class name="User" table="user">
+<class name="User" table="User">
 <id name="id" column="iduser">
+
 <generator class="native"></generator>
+
 </id>
 <property name="username" column="username"></property>
 <property name="password" column="password"></property>
 <property name="email" column="email"></property>
-<one-to-one name="avatar" cascade="persist, delete" />
+
+
+
+<one-to-one name="Avatar" cascade="persist,delete" />
 
 <set name="roles" table="user_role" lazy="false" cascade="all-delete-orphan">
 <key column="iduser"></key>
-<many-to-many column="idrole" class="Role"></many-to-many>
+<many-to-many column="id" class="Role"></many-to-many>
 </set>
+<set name="chatGroups" cascade="all" table="user_chatgroup" inverse="false" lazy="false" fetch="select">
+         	<key column="iduser"/>
+         <many-to-many class="ChatGroup" column="idchatgroup"/>
+      	</set>
 
 </class>
 

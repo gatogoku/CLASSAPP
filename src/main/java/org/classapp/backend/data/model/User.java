@@ -13,13 +13,15 @@ import javax.persistence.Table;
 
 
 
+
+
 public class User {
 	Long id;
 	String username;
 	String password;
 	String email;
 	Avatar avatar;
-	
+	private Set<ChatGroup> chatGroups = new HashSet<ChatGroup>();
 	
 
 	private Set<Role> roles = new HashSet<Role>();
@@ -133,6 +135,24 @@ public User(){}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+
+
+	/**
+	 * @return the chatGroups
+	 */
+	public Set<ChatGroup> getChatGroups() {
+		return chatGroups;
+	}
+
+
+
+	/**
+	 * @param chatGroups the chatGroups to set
+	 */
+	public void setChatGroups(Set<ChatGroup> chatGroups) {
+		this.chatGroups = chatGroups;
 	}
 
 
