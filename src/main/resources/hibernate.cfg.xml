@@ -27,7 +27,7 @@
 		<!-- Here comes the mapping definition - saved in resources dir with this 
 			hibernate config -->
 		
-		<mapping resource = "Avatar.hbm.xml"/>
+		<mapping resource = "avatar.hbm.xml"/>
 		<mapping resource = "User.hbm.xml"/>
 		<mapping resource="ChatGroup.hbm.xml" />
 		<mapping resource="Message.hbm.xml" />
