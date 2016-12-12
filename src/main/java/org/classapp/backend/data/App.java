@@ -47,7 +47,7 @@ public class App
 		chatGroup1.setName("name, changed");
 		chatGroupDAO.update(chatGroup1);
 		
-		System.out.println(chatGroupDAO.selectAll().toString());
+		System.out.println(chatGroupDAO.selectAll(ChatGroup.class).toString());
     	
     }
 }
