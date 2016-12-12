@@ -122,6 +122,7 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 			startTransaction();
 			result = getSession().createQuery(
 					"From " + entityClass.getSimpleName()).list();
+			System.out.println("a que no llega");
 
 		} catch (HibernateException he) {
 			

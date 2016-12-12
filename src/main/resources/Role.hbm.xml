@@ -12,7 +12,10 @@
 		</id>
 		<property name="name" column="NAME" />
 		<property name="description" column="DESCRIPTION" />
-		
+		<set name="users" table="user_role" lazy="false" cascade="all-delete-orphan">
+<key column="idrole"></key>
+<many-to-many column="iduser" class="User"></many-to-many>
+</set>
 	</class>
 
 </hibernate-mapping>

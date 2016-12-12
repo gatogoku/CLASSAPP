@@ -1,24 +1,26 @@
 package org.classapp.backend.data.dao;
 
-import org.classapp.backend.data.impl.HibernateRoleDao;
+import java.util.List;
+
+import org.classapp.backend.data.impl.HibernateRoleDAO;
 import org.classapp.backend.data.model.Role;
 
 import junit.framework.TestCase;
 
 public class RoleDaoTest extends TestCase  {
-	private roleDao roleDAO;
+	private RoleDAO roleDAO;
 	
 	
 	
 	protected void setUp() throws Exception {
-		roleDAO = new HibernateRoleDao();
+		roleDAO = new HibernateRoleDAO();
 	}
 
 	protected void tearDown() throws Exception {
 	}
 
 	public final void testSelectById() {
-		Role insertRole = new Role(null,"Admin","Administrator role");
+		Role insertRole = new Role(1L,"Admin","Administrator role");
 		roleDAO.insert(insertRole);
 		Role role = roleDAO.selectById(insertRole.getId(), null);
 		
@@ -26,11 +28,17 @@ public class RoleDaoTest extends TestCase  {
 	}
 
 	public final void testSelectAll() {
-		int totalElements = roleDAO.selectAll(null).size();
+		List<Role> roles = roleDAO.selectAll(Role.class);
+		int totalElements = 0;
 		
-		Role insertRole = new Role(null,"Admin","Administrator role");
+		if (null != roles) {
+			 totalElements = roles.size();
+		}
+		
+		
+		Role insertRole = new Role(1L,"Admin","Administrator role");
 		roleDAO.insert(insertRole);
-		int totalElementsAfterInsert = roleDAO.selectAll(null).size();
+		int totalElementsAfterInsert = roleDAO.selectAll(Role.class).size();
 		
 		assertEquals("Select All returns all elements",totalElements + 1, totalElementsAfterInsert);
 	}

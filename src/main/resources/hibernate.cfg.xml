@@ -22,13 +22,14 @@
 		<property name="current_session_context_class">thread</property>
 		<property name="hibernate.show_sql">true</property>
 
-		<property name="hbm2ddl.auto">create-drop</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<!-- Here comes the mapping definition - saved in resources dir with this 
-			hibernate config -->		
-		<mapping resource = "avatar.hbm.xml" />
-		<mapping resource = "User.hbm.xml" />
+			hibernate config -->
+		<mapping resource="Avatar.hbm.xml" />
+		<mapping resource="User.hbm.xml" />
 		<mapping resource="Role.hbm.xml" />
+		<mapping resource="Class.hbm.xml" />
 
 
 	</session-factory>

@@ -2,9 +2,18 @@ package org.classapp.backend.data;
 
 import java.util.List;
 
+import org.classapp.backend.data.dao.RoleDAO;
+import org.classapp.backend.data.dao.UserDAO;
+import org.classapp.backend.data.impl.HibernateRoleDAO;
+import org.classapp.backend.data.impl.HibernateUserDAO;
+import org.classapp.backend.data.model.Role;
+import org.classapp.backend.data.model.User;
+
 public class App {
 
 	public static void main(String[] args) {
-
+		UserDAO roleDAO = new HibernateUserDAO();
+		
+		roleDAO.selectAll(User.class);
 	}
 }
