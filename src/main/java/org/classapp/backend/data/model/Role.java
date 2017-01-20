@@ -5,6 +5,11 @@ public class Role {
 	private Long id;
 	private String name;
 	private String description;
+	private User user;
+	
+	public Role() {
+	}
+	
 	/**
 	 * @param id
 	 * @param name
@@ -15,11 +20,7 @@ public class Role {
 		this.name = name;
 		this.description = description;
 	}
-	/**
-	 * 
-	 */
-	public Role() {
-	}
+	
 	/**
 	 * @return the id
 	 */

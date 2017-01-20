@@ -1,25 +1,17 @@
 package org.classapp.backend.data;
 
 import java.util.Date;
-import java.util.List;
 
+import org.classapp.backend.data.model.User;
 import org.classapp.backend.data.dao.ChatGroupDAO;
-import org.classapp.backend.data.dao.roleDao;
 import org.classapp.backend.data.impl.ChatGroupDAOHibernate;
-import org.classapp.backend.data.impl.HibernateRoleDao;
-import org.classapp.backend.data.model.Avatar;
 import org.classapp.backend.data.model.ChatGroup;
 import org.classapp.backend.data.model.Message;
-import org.classapp.backend.data.model.Role;
-import org.classapp.backend.data.model.User;
 
+public class App {
 
+	public static void main(String[] args) {
 
-public class App 
-{
-
-    public static void main( String[] args )
-    {
     	ChatGroup chatGroup1 = new ChatGroup();
 		chatGroup1.setName("Sample ChatGroup name");
 		chatGroup1.setDescription("ChatGroup description");

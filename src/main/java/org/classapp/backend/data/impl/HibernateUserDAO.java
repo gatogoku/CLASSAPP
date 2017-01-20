@@ -1,15 +1,16 @@
 package org.classapp.backend.data.impl;
 
-import java.util.List;
-
 import org.classapp.backend.data.dao.UserDAO;
 import org.classapp.backend.data.model.User;
+<<<<<<< HEAD
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.classapp.backend.data.HibernateUtil;
 
+=======
+>>>>>>> refs/heads/master
 
 public class HibernateUserDAO extends GenericDAOHibernate<User> implements UserDAO {
 
