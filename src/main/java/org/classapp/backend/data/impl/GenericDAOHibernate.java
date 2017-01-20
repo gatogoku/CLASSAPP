@@ -19,7 +19,7 @@ import org.classapp.backend.data.dao.GenericDAO;
  */
 public class GenericDAOHibernate<T> implements GenericDAO<T> {
 
-	private Session session;
+	protected Session session;
 
 	/**
 	 * starts transaction
